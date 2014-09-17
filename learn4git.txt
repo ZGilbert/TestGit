@@ -1,0 +1,102 @@
+http://www.open-open.com/lib/view/open1332904495999.html 常用命令
+
+http://www.open-open.com/lib/view/open1328069609436.html 配置命令
+
+http://www.360doc.com/content/13/0322/13/4238731_273202893.shtml vim命令
+
+我们常用 -p 选项展开显示每次提交的内容差异，用 -2 则仅显示最近的两次更新
+
+--stat，仅显示简要的增改行数统计
+
+常用的 --pretty 选项，可以指定使用完全不同于默认格式的方式展示提交历史。比如用oneline 将每个提交放在一行显示，
+这在提交数很大时非常有用。另外还有 short，full 和fuller 可以用，展示的信息或多或少有些不同
+$ git log --pretty=oneline
+最有意思的是 format，可以定制要显示的记录格式，这样的输出便于后期编程提取分析，像这样：
+$ git log --pretty=format:"%h - %an, %ar : %s"
+
+用 oneline 或 format 时结合 --graph 选项，可以看到开头多出一些 ASCII 字符串表示的简单图形，形象地展示了每个提交所在的分支及其分化衍合情况。
+
+
+按照时间作限制的选项，比如 --since 和 --until。下面的命令列出所有最近两周内的提交：
+$ git log --since=2.weeks
+你可以给出各种时间格式，比如说具体的某一天（“2008-01-15”），或者是多久以前（“2 years 1 day 3 minutes ago”）。
+
+还可以给出若干搜索条件，列出符合的提交。用 --author 选项显示指定作者的提交，用 --grep 选项搜索提交说明中的关键字。
+（请注意，如果要得到同时满足这两个选项搜索条件的提交，就必须用--all-match 选项。）
+
+如果只关心某些文件或者目录的历史提交，可以在 git log 选项的最后指定它们的路径。因为是放在最后位置上的选项，所以用两个短划线（--）隔开之前的选项和后面限定的路径名。
+
+
+$ git commit --amend 
+
+NSUnderlineStyleAttributeName
+
+http://www.tuicool.com/articles/Fvqia2
+
+#import "Cart.h"
+
+@implementation Cart  strcpy(0, "exception"); 内存溢出?
+
+
+2014/9/16 一天
+git pull 
+
+git clone http://git.mst365.cn/dev/mst-b2c-ios.git
+
+git tag
+
+git remote -v
+
+git remote rm test
+
+git remote add test https://github.com/ZGilbert/HelloWorld
+
+git remote add AddRep https://github.com/ZGilbert/HelloWorld
+
+git remote show 
+
+git remote show origin
+
+git remote rename AddRep ap
+
+git push origin master
+
+git fetch AddRep
+
+git show v1.0
+
+git log -pretty=oneline
+
+git tag -a v1.0.0 -m 'for addition version' 343b8ac 
+
+分享标签
+默认情况下，git push 并不会把标签传送到远端服务器上，只有通过显式命令才能分享标签到远端仓库。
+其命令格式如同推送分支，运行git push origin [tagname] 即可：
+
+$ git push origin v1.5
+如果要一次推送所有本地新增的标签上去，可以使用 --tags 选项：
+
+$ git push origin --tags
+
+$ git config --global alias.co checkout
+$ git config --global alias.br branch
+$ git config --global alias.ci commit
+$ git config --global alias.st status
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
